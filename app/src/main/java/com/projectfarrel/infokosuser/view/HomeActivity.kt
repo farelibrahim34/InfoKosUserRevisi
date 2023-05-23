@@ -112,4 +112,33 @@ class HomeActivity : AppCompatActivity() {
 
 
     }
+    override fun onResume() {
+        super.onResume()
+        dataKos()
+        dataKosPi()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        dataKos()
+        dataKosPi()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        dataKos()
+        dataKosPi()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        dataKos()
+        dataKosPi()
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        dataKos()
+        dataKosPi()
+    }
 }

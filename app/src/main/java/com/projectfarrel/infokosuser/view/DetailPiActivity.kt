@@ -33,6 +33,10 @@ class DetailPiActivity : AppCompatActivity() {
         binding = ActivityDetailPiBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.ivBackDetail.setOnClickListener {
+            startActivity(Intent(this,HomeActivity::class.java))
+        }
+
         setDetail()
         handler = Handler(Looper.getMainLooper())
         runnable = object : Runnable{
