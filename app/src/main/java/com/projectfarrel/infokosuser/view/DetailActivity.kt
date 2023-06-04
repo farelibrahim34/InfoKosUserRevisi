@@ -52,6 +52,8 @@ class DetailActivity : AppCompatActivity() {
         val id = intent.getStringExtra("id")!!.toInt()
         val kirimId = intent.getStringExtra("id")
         val linkMaps = intent.getStringExtra("linkMaps")
+        val desc = intent.getStringExtra("desc")
+
 
 
 
@@ -78,9 +80,10 @@ class DetailActivity : AppCompatActivity() {
 
 
         binding.txtKos.text=nama
-        binding.txtAlamat.setText(alamat)
+        binding.txtAlamat.setText("Alamat   : "+alamat)
         binding.btnNomorHp.setText(nohp)
         binding.viewPagerHomeDetail
+        binding.txtDesc.setText("Deskripsi  : "+desc)
 
         binding.imageView2.setOnClickListener {
             val link = Intent(Intent.ACTION_VIEW, Uri.parse(linkMaps))
