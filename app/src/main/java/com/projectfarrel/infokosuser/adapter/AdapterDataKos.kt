@@ -11,22 +11,15 @@ import com.projectfarrel.infokosuser.view.DetailActivity
 
 
 class AdapterDataKos(private var listData:List<ResponseDataKosItem>): RecyclerView.Adapter<AdapterDataKos.ViewHolder>() {
-    class ViewHolder(var binding : ItemBinding):RecyclerView.ViewHolder(binding.root) {
-
-    }
-
+    class ViewHolder(var binding : ItemBinding):RecyclerView.ViewHolder(binding.root)
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = ItemBinding.inflate(LayoutInflater.from(parent.context),parent, false)
         return ViewHolder(view)
     }
-
-
-
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.binding.txtNamaKos.text = listData[position].namaKos
         holder.binding.txtRate.text = listData[position].rate
         Glide.with(holder.itemView).load(listData[position].fotoKos).fitCenter().into(holder.binding.ivImage)
-
         holder.binding.cardList.setOnClickListener {
             val detail = Intent(it.context, DetailActivity::class.java)
             detail.putExtra("id",listData[position].id)
@@ -41,7 +34,6 @@ class AdapterDataKos(private var listData:List<ResponseDataKosItem>): RecyclerVi
             detail.putExtra("desc",listData[position].desc)
             it.context.startActivity(detail)
         }
-
     }
     override fun getItemCount(): Int {
         return listData.size

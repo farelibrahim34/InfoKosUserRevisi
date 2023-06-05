@@ -40,6 +40,12 @@
         <item name="cornerRadius">10dp</item>
         <item name="textAllCaps">false</item>
     </style>
+    <style name="Theme.InfoKosUser.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.InfoKosUser.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.InfoKosUser.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
     <!--    <style name="background">-->
     <!--        <item name="backgroundTint">@color/warna_background</item>-->
     <!--    </style>-->

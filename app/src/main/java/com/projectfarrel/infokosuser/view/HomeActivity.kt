@@ -1,6 +1,8 @@
 package com.projectfarrel.infokosuser.view
 
 import android.content.DialogInterface
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -55,6 +57,29 @@ class HomeActivity : AppCompatActivity() {
 
         }
         handler.post(runnable)
+
+        binding.btnSaran.setOnClickListener {
+//            val link = Intent(Intent.ACTION_VIEW, Uri.parse("https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRwRrtXmJWRJZvrKjLZZLPcVCvdbgftvCQTzJvKrPVPmPsJxsBxRFPTTXxqsJzrFbQQPlKss"))
+//            startActivity(link)
+
+            AlertDialog.Builder(this)
+                .setTitle("Masukan dan Saran")
+                .setMessage("WhatsApp / Email")
+                .setPositiveButton("WhatsApp"){ dialogInterface: DialogInterface, i: Int ->
+                    val link = Intent(Intent.ACTION_VIEW, Uri.parse("https://wa.me/62895358986590"))
+                    startActivity(link)
+                }
+                .setNegativeButton("Email"){ dialogInterface: DialogInterface, i: Int ->
+//                    val link = Intent(Intent.ACTION_SEND, Uri.parse("farrelibrahim34@gmail.com"))
+//                    startActivity(link)
+                    val link = Intent(Intent.ACTION_SENDTO).apply {
+                        data = Uri.parse("mailto:")
+                        putExtra(Intent.EXTRA_EMAIL,"farrelibrahim34@gmail.com")
+                    }
+                    startActivity(link)
+                }
+                .show()
+        }
     }
     fun dataKos(){
         viewModel = ViewModelProvider(this).get(ViewModelDataKos::class.java)
@@ -117,27 +142,23 @@ class HomeActivity : AppCompatActivity() {
         dataKos()
         dataKosPi()
     }
-
-    override fun onStart() {
-        super.onStart()
-        dataKos()
-        dataKosPi()
-    }
-
     override fun onPause() {
         super.onPause()
         dataKos()
         dataKosPi()
     }
-
     override fun onStop() {
         super.onStop()
         dataKos()
         dataKosPi()
     }
-
     override fun onRestart() {
         super.onRestart()
+        dataKos()
+        dataKosPi()
+    }
+    override fun onStart() {
+        super.onStart()
         dataKos()
         dataKosPi()
     }

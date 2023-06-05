@@ -7,8 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.projectfarrel.infokosuser.databinding.ItemSlideBinding
 import com.projectfarrel.infokosuser.model.ImageData
-
-
 class ImageSliderAdapter(private val items : List<ImageData>): RecyclerView.Adapter<ImageSliderAdapter.ImageViewHolder>() {
     inner class ImageViewHolder(itemView: ItemSlideBinding) : RecyclerView.ViewHolder(itemView.root){
         private val binding = itemView
@@ -18,19 +16,14 @@ class ImageSliderAdapter(private val items : List<ImageData>): RecyclerView.Adap
                     .load(data.image)
                     .fitCenter()
                     .into(ivSlider)
-
             }
         }
     }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImageViewHolder {
         return ImageViewHolder(ItemSlideBinding.inflate(LayoutInflater.from(parent.context),parent,false))
     }
     override fun onBindViewHolder(holder: ImageViewHolder, position: Int) {
         holder.bind(items[position])
     }
-
     override fun getItemCount(): Int = items.size
-
-
 }

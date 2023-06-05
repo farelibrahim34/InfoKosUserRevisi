@@ -39,7 +39,6 @@ class DetailActivity : AppCompatActivity() {
         binding.ivBackDetail.setOnClickListener {
             startActivity(Intent(this,HomeActivity::class.java))
         }
-
     }
     private fun setDetail(){
         val nama = intent.getStringExtra("nama")
@@ -54,9 +53,6 @@ class DetailActivity : AppCompatActivity() {
         val linkMaps = intent.getStringExtra("linkMaps")
         val desc = intent.getStringExtra("desc")
 
-
-
-
         list.add(
             ImageData(foto1.toString())
         )
@@ -70,7 +66,6 @@ class DetailActivity : AppCompatActivity() {
         binding.viewPagerHomeDetail.adapter = adapterSlide
         dots = ArrayList()
         setIndicator()
-
         binding.viewPagerHomeDetail.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
             override fun onPageSelected(position: Int) {
                 selectedDot(position)
@@ -107,12 +102,8 @@ class DetailActivity : AppCompatActivity() {
                 index++
                 handler.postDelayed(this,3000)
             }
-
         }
         handler.post(runnable)
-
-
-
     }
 
     private fun selectedDot(position: Int) {

@@ -15,5 +15,4 @@ interface ApiInterface {
     @GET("datakosPutri")
     fun getAllDataKosPutri(): Call<List<ResponseDataKosItem>>
 
-
 }

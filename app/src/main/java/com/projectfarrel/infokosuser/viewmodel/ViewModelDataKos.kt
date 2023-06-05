@@ -16,26 +16,19 @@ class ViewModelDataKos@Inject constructor(private val api : ApiInterface): ViewM
 
     lateinit var ldDataKosPi : MutableLiveData<List<ResponseDataKosItem>>
 
-
     init {
         ldDataKos = MutableLiveData()
-
 
         ldDataKosPi = MutableLiveData()
 
     }
-
     fun getDataKos(): MutableLiveData<List<ResponseDataKosItem>> {
         return ldDataKos
     }
 
-
-
     fun getDataKosPi(): MutableLiveData<List<ResponseDataKosItem>> {
         return ldDataKosPi
     }
-
-
     fun callApiDataKos(){
         api.getAllDataKos()
             .enqueue(object : Callback<List<ResponseDataKosItem>> {
@@ -76,9 +69,4 @@ class ViewModelDataKos@Inject constructor(private val api : ApiInterface): ViewM
 
             })
     }
-
-
-
-
-
 }
