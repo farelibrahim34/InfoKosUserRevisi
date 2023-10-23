@@ -39,6 +39,7 @@ class AdapterDataKosPi(private var listData:List<ResponseDataKosItem>): Recycler
             detail.putExtra("nohp",listData[position].noHp)
             detail.putExtra("linkMaps",listData[position].linkMaps)
             detail.putExtra("desc",listData[position].desc)
+            detail.putExtra("update",listData[position].createdAt)
             it.context.startActivity(detail)
         }
 

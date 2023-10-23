@@ -52,6 +52,8 @@ class DetailActivity : AppCompatActivity() {
         val kirimId = intent.getStringExtra("id")
         val linkMaps = intent.getStringExtra("linkMaps")
         val desc = intent.getStringExtra("desc")
+        val updt = intent.getStringExtra("update")
+        binding.txtUpdate.text=updt
 
         list.add(
             ImageData(foto1.toString())
@@ -81,8 +83,9 @@ class DetailActivity : AppCompatActivity() {
         binding.txtDesc.setText("Deskripsi  : "+desc)
 
         binding.imageView2.setOnClickListener {
-            val link = Intent(Intent.ACTION_VIEW, Uri.parse(linkMaps))
-            startActivity(link)
+            val intent = Intent(this, MapsActivity::class.java)
+            intent.putExtra("linkMaps",linkMaps)
+            startActivity(intent)
         }
 
         binding.btnNomorHp.setOnClickListener {

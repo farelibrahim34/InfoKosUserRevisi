@@ -12,5 +12,5 @@ data class ResponseDataKosItem(
     val noHp: String,
     val linkMaps: String,
     val rate : String,
-    val desc: String
+    val desc: String,
 )
