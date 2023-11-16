@@ -93,4 +93,8 @@ dependencies {
     implementation "com.airbnb.android:lottie:$lottieVersion"
 
     implementation 'com.facebook.shimmer:shimmer:0.5.0@aar'
+    //fragment
+    implementation 'androidx.navigation:navigation-fragment:2.5.3'
+    //noinspection GradleDependency
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.2'
 }
