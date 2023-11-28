@@ -8,9 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.projectfarrel.infokosuser.databinding.ItemPage3Binding
 import com.projectfarrel.infokosuser.view.HomeActivity
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
+
 class FragmentThree : Fragment() {
     private lateinit var binding : ItemPage3Binding
 

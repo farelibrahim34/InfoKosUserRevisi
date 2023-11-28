@@ -5,9 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.webkit.WebViewClient
 import com.projectfarrel.infokosuser.databinding.ActivityMapsBinding
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
+
+
 class MapsActivity : AppCompatActivity() {
     lateinit var binding : ActivityMapsBinding
     override fun onCreate(savedInstanceState: Bundle?) {

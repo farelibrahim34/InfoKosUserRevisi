@@ -9,17 +9,15 @@ import android.os.Looper
 import android.text.Html
 import android.util.Log
 import android.widget.TextView
-import android.widget.Toast
 import androidx.core.content.ContextCompat
-import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
 import com.projectfarrel.infokosuser.R
 import com.projectfarrel.infokosuser.adapter.ImageSliderAdapter
 import com.projectfarrel.infokosuser.databinding.ActivityDetailPiBinding
 import com.projectfarrel.infokosuser.model.ImageData
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
+
+
 class DetailPiActivity : AppCompatActivity() {
     lateinit var binding : ActivityDetailPiBinding
     lateinit private var adapterSlide: ImageSliderAdapter
@@ -32,6 +30,9 @@ class DetailPiActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailPiBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.btnPesan.setOnClickListener {
+            startActivity(Intent(this,PesanActivity::class.java))
+        }
 
         binding.ivBackDetail.setOnClickListener {
             startActivity(Intent(this,HomeActivity::class.java))

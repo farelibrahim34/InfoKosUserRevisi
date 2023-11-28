@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.projectfarrel.infokosuser.databinding.ItemPageBinding
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
+
+
 class FragmentOne : Fragment() {
     private lateinit var binding : ItemPageBinding
 

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/warna_background"
+    tools:context=".view.PesanActivity">
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvArraowDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_bg_second"
+        android:outlineAmbientShadowColor="@color/warna_button"
+        android:outlineSpotShadowColor="@color/warna_button"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBackDetail"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout40"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_bg"
+        android:textColor="@color/warna_primary_font"
+        android:textColorHint="@color/warna_primary_font"
+        app:boxStrokeColor="@color/warna_background"
+        app:boxStrokeWidth="0dp"
+        app:hintTextColor="@color/warna_primary_font"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout30"
+        app:shapeAppearanceOverlay="@style/Button">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNoKamar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Nomor Kamar"
+            android:inputType="text"
+            android:textColor="@color/warna_primary_font"
+            android:textColorHint="@color/warna_primary_font"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:boxStrokeWidth="0dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout30"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/rounded_bg"
+        android:textColor="@color/warna_primary_font"
+        android:textColorHint="@color/warna_primary_font"
+        app:boxStrokeColor="@color/warna_background"
+        app:boxStrokeWidth="0dp"
+        app:hintTextColor="@color/warna_primary_font"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+        app:shapeAppearanceOverlay="@style/Button">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTglPesan"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Tanggal Pesan"
+            android:inputType="text"
+            android:textColor="@color/warna_primary_font"
+            android:textColorHint="@color/warna_primary_font"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:boxStrokeWidth="0dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout3"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_bg"
+        android:textColor="@color/warna_primary_font"
+        android:textColorHint="@color/warna_primary_font"
+        app:boxStrokeColor="@color/warna_background"
+        app:boxStrokeWidth="0dp"
+        app:hintTextColor="@color/warna_primary_font"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+        app:shapeAppearanceOverlay="@style/Button">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etAddNoHpE"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Nomer HP"
+            android:inputType="text"
+            android:textColor="@color/warna_primary_font"
+            android:textColorHint="@color/warna_primary_font"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:boxStrokeWidth="0dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_bg"
+        android:textColor="@color/warna_primary_font"
+        android:textColorHint="@color/warna_primary_font"
+        app:boxStrokeColor="@color/warna_background"
+        app:boxStrokeWidth="0dp"
+        app:hintTextColor="@color/warna_primary_font"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:shapeAppearanceOverlay="@style/Button">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNamaKos"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Kos Yang Akan Dipesan"
+            android:inputType="text"
+            android:textColor="@color/warna_primary_font"
+            android:textColorHint="@color/warna_primary_font"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:boxStrokeWidth="0dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_bg"
+        android:textColor="@color/warna_primary_font"
+        android:textColorHint="@color/warna_primary_font"
+        app:boxStrokeColor="@color/warna_background"
+        app:boxStrokeWidth="0dp"
+        app:hintTextColor="@color/warna_primary_font"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAddE"
+        app:shapeAppearanceOverlay="@style/Button">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNama"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Nama"
+            android:inputType="text"
+            android:textColor="@color/warna_primary_font"
+            android:textColorHint="@color/warna_primary_font"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:boxStrokeWidth="0dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textViewAddE"
+        android:layout_width="wrap_content"
+        android:textColor="@color/warna_primary_font"
+        android:fontFamily="@font/poppins_medium"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Isi Data Diri"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/btntglPesan"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textInputLayout30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textInputLayout30"
+        app:layout_constraintTop_toTopOf="@+id/textInputLayout30"
+        app:srcCompat="@drawable/baseline_calendar_month_24" />
+    <Button
+        android:id="@+id/btnPesan"
+        style="@style/firstbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="Pesan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pending"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPesan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnPesan" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

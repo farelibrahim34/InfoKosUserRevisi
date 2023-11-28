@@ -10,10 +10,10 @@ import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.projectfarrel.infokosuser.adapter.ViewPagerFragmentAdapter
 import com.projectfarrel.infokosuser.databinding.ActivityMainBinding
-import dagger.hilt.android.AndroidEntryPoint
+
 import me.relex.circleindicator.CircleIndicator3
 
-@AndroidEntryPoint
+
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
 

@@ -17,9 +17,9 @@ import com.projectfarrel.infokosuser.R
 import com.projectfarrel.infokosuser.adapter.ImageSliderAdapter
 import com.projectfarrel.infokosuser.databinding.ActivityDetailBinding
 import com.projectfarrel.infokosuser.model.ImageData
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
+
+
 class DetailActivity : AppCompatActivity() {
     lateinit var binding : ActivityDetailBinding
     lateinit private var adapterSlide: ImageSliderAdapter
@@ -35,6 +35,9 @@ class DetailActivity : AppCompatActivity() {
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btnPesan.setOnClickListener {
+            startActivity(Intent(this,PesanActivity::class.java))
+        }
         setDetail()
         binding.ivBackDetail.setOnClickListener {
             startActivity(Intent(this,HomeActivity::class.java))

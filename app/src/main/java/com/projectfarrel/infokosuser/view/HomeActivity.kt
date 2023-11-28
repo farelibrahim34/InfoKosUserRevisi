@@ -22,9 +22,8 @@ import com.projectfarrel.infokosuser.view.wrapper.FragmentVpHomeOne
 import com.projectfarrel.infokosuser.view.wrapper.FragmentVpHomeThree
 import com.projectfarrel.infokosuser.view.wrapper.FragmentVpHomeTwo
 import com.projectfarrel.infokosuser.viewmodel.ViewModelDataKos
-import dagger.hilt.android.AndroidEntryPoint
 import me.relex.circleindicator.CircleIndicator3
-@AndroidEntryPoint
+
 class HomeActivity : AppCompatActivity() {
     lateinit var binding : ActivityHomeBinding
     private lateinit var viewModel : ViewModelDataKos

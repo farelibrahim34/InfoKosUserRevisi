@@ -3,23 +3,27 @@ package com.projectfarrel.infokosuser.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.projectfarrel.infokosuser.model.ResponseDataKosItem
+import com.projectfarrel.infokosuser.model.ResponsePesanKos
+import com.projectfarrel.infokosuser.network.ApiClient
 import com.projectfarrel.infokosuser.network.ApiInterface
-import dagger.hilt.android.lifecycle.HiltViewModel
+
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import javax.inject.Inject
 
-@HiltViewModel
-class ViewModelDataKos@Inject constructor(private val api : ApiInterface): ViewModel() {
+
+
+class ViewModelDataKos: ViewModel() {
     lateinit var ldDataKos : MutableLiveData<List<ResponseDataKosItem>>
 
     lateinit var ldDataKosPi : MutableLiveData<List<ResponseDataKosItem>>
+    lateinit var postLdPesanKos : MutableLiveData<ResponsePesanKos?>
 
     init {
         ldDataKos = MutableLiveData()
 
         ldDataKosPi = MutableLiveData()
+        postLdPesanKos = MutableLiveData()
 
     }
     fun getDataKos(): MutableLiveData<List<ResponseDataKosItem>> {
@@ -29,8 +33,14 @@ class ViewModelDataKos@Inject constructor(private val api : ApiInterface): ViewM
     fun getDataKosPi(): MutableLiveData<List<ResponseDataKosItem>> {
         return ldDataKosPi
     }
+
+    fun postPesanKos(): MutableLiveData<ResponsePesanKos?>{
+        return postLdPesanKos
+    }
+
+
     fun callApiDataKos(){
-        api.getAllDataKos()
+        ApiClient.instance.getAllDataKos()
             .enqueue(object : Callback<List<ResponseDataKosItem>> {
                 override fun onResponse(
                     call: Call<List<ResponseDataKosItem>>,
@@ -50,7 +60,7 @@ class ViewModelDataKos@Inject constructor(private val api : ApiInterface): ViewM
             })
     }
     fun callApiDataKosPi(){
-        api.getAllDataKosPutri()
+        ApiClient.instance.getAllDataKosPutri()
             .enqueue(object  : Callback<List<ResponseDataKosItem>> {
                 override fun onResponse(
                     call: Call<List<ResponseDataKosItem>>,
