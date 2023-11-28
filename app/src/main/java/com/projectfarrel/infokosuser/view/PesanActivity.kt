@@ -26,6 +26,9 @@ class PesanActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPesanBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val nKos = intent.getStringExtra("nama")
+        binding.etNamaKos.setText(nKos)
+
 
 
         val kalender = Calendar.getInstance()

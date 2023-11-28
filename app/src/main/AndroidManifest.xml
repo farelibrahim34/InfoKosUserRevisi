@@ -36,6 +36,9 @@
             android:name=".view.DetailActivity"
             android:exported="false" />
         <activity
+            android:name=".view.NotifActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.HomeActivity"
             android:exported="true" >
             <intent-filter>

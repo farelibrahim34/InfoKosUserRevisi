@@ -37,6 +37,10 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.btnNotif.setOnClickListener {
+            val intent = Intent(this, NotifActivity::class.java)
+            startActivity(intent)
+        }
 
         dataKos()
         bannerHome()

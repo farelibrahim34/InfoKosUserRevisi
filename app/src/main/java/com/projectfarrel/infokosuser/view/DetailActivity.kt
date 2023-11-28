@@ -36,7 +36,10 @@ class DetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnPesan.setOnClickListener {
-            startActivity(Intent(this,PesanActivity::class.java))
+            val nama = binding.txtKos.text
+            val intent = Intent(this, PesanActivity::class.java)
+            intent.putExtra("nama",nama)
+            startActivity(intent)
         }
         setDetail()
         binding.ivBackDetail.setOnClickListener {

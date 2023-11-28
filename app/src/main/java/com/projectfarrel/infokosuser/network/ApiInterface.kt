@@ -16,5 +16,7 @@ interface ApiInterface {
     fun getAllDataKosPutri(): Call<List<ResponseDataKosItem>>
     @POST("pesanKos")
     fun addPesan(@Body request : PesanKos) :Call<ResponsePesanKos>
+    @GET("pesanKos")
+    fun getAllPesanKos(): Call<List<ResponsePesanKosItem>>
 
 }
